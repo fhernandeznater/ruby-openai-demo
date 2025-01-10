@@ -1,7 +1,9 @@
 require "openai"
 require "dotenv/load"
 
-pp "test"
+puts "Hello! How can I help you today?"
+puts "----------------------------------------------------"
+
 
 client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_KEY"))
 
@@ -9,7 +11,7 @@ client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_KEY"))
 message_list = [
   {
     "role" => "system",
-    "content" => "You are a helpful assistant who talks like Shakespeare."
+    "content" => "You are a helpful assistant."
   },
   {
     "role" => "user",
@@ -26,3 +28,5 @@ api_response = client.chat(
 )
 
 pp api_response
+
+puts "----------------------------------------------------"

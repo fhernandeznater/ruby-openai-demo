@@ -1,1 +1,3 @@
+require "openai"
+
 pp "howdy"
